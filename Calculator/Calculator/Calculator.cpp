@@ -2,10 +2,8 @@
 //
 
 #include <iostream>
-
+#include "calculator.h"
 using namespace std;
-
-void Calculate(int num1, int num2, char op);
 
 int main()
 {
@@ -18,28 +16,7 @@ int main()
     cout << "Enter two operands: ";
     cin >> num1 >> num2;
 
-    Calculate(num1, num2, op);
+    calculate(num1, num2, op);
     return 0;
 }
 
-void Calculate(int num1, int num2, char op)
-{
-    switch (op)
-    {
-        case '+':
-            cout << num1 << " + " << num2 << " = " << num1 + num2;
-            break;
-        case '-':
-            cout << num1 << " - " << num2 << " = " << num1 - num2;
-            break;
-        case '*':
-            cout << num1 << " * " << num2 << " = " << num1 * num2;
-            break;
-        case '/':
-            cout << num1 << " / " << num2 << " = " << num1 / num2;
-            break;
-        default:
-            cout << "Error! operator is not correct";
-            break;
-    }
-}
